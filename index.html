@@ -1,27 +1,66 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Noctyra Archive</title>
-
-    <link rel="stylesheet" href="style.css">
+  <title>Noctyra Archives</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <img id="background" src="assets/wood-background.png">
+  <img class="background" src="assets/wood_background.png">
 
-    <h1>Noctyra Archive</h1>
+  <main class="desk">
 
-    <img id="candle" src="assets/candle.png">
+    <img class="logo" src="assets/logo.png">
+    <img class="candle" src="assets/candle.png">
+    <img class="books" src="assets/stacked_books.png">
+    <img class="feather" src="assets/feather.png">
+    <img class="ink" src="assets/ink_bottle.png">
+    <img class="compass" src="assets/compass.png">
+    <img class="cup" src="assets/cup.png">
+    <img class="leaves" src="assets/leaves.png">
 
-    <img id="books" src="assets/books.png">
+    <section class="menu-panel">
+      <img src="assets/parchment.png" class="panel-img">
 
-    <img id="feather" src="assets/feather.png">
+      <div class="menu-content">
+        <h1>Noctyra Archives</h1>
+        <p class="subtitle">Observation is remembering.</p>
 
-    <script src="script.js"></script>
+        <button onclick="loadPage('content/about.html')">
+          About The Archive
+        </button>
 
+        <button onclick="loadPage('content/kin-records.html')">
+          Kin Records
+        </button>
+
+        <button onclick="loadPage('content/system-notes.html')">
+          System Notes
+        </button>
+
+        <button onclick="unlockSovenna()">
+          Sovenna Dossier
+        </button>
+
+        <button onclick="unlockTyriel()">
+          Tyriel Files
+        </button>
+      </div>
+    </section>
+
+    <section class="viewer-panel">
+      <img src="assets/parchment2.png" class="panel-img">
+
+      <div id="viewer" class="viewer-content">
+        <h2>Archive Desk</h2>
+        <img class="divider" src="assets/devider.png">
+        <p>Select a file from the archive.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
