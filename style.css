@@ -1,42 +1,73 @@
 body {
-  margin: 0;
-  min-height: 100vh;
-  background: #080604;
-  color: #d8c29d;
-  font-family: Georgia, serif;
+
+    margin:0;
+
+    background:black;
+
+    overflow:hidden;
+
 }
 
-.archive {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
+#background {
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-10;
+
 }
 
-h1, h2 {
-  letter-spacing: 3px;
-  text-transform: uppercase;
+#candle {
+
+    position:absolute;
+
+    left:50px;
+
+    top:50px;
+
+    width:200px;
+
 }
 
-button {
-  display: block;
-  width: 280px;
-  margin: 15px 0;
-  padding: 14px;
-  background: #1b120b;
-  color: #d8c29d;
-  border: 1px solid #8a6a3d;
-  font-family: Georgia, serif;
-  font-size: 18px;
-  cursor: pointer;
+#books {
+
+    position:absolute;
+
+    left:300px;
+
+    top:500px;
+
+    width:250px;
+
 }
 
-button:hover {
-  background: #2a1b10;
+#feather {
+
+    position:absolute;
+
+    right:100px;
+
+    top:100px;
+
+    width:200px;
+
 }
 
-#viewer {
-  margin-top: 40px;
-  padding: 30px;
-  border: 1px solid #8a6a3d;
-  background: rgba(0, 0, 0, 0.65);
+h1 {
+
+    position:absolute;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#d8c29d;
+
 }
