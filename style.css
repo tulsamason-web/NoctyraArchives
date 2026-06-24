@@ -1,73 +1,181 @@
 body {
-
-    margin:0;
-
-    background:black;
-
-    overflow:hidden;
-
+  margin: 0;
+  background: #050302;
+  color: #2a160c;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
 }
 
-#background {
-
-    position:fixed;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    z-index:-10;
-
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
 }
 
-#candle {
-
-    position:absolute;
-
-    left:50px;
-
-    top:50px;
-
-    width:200px;
-
+.desk {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px;
 }
 
-#books {
-
-    position:absolute;
-
-    left:300px;
-
-    top:500px;
-
-    width:250px;
-
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 220px;
+  transform: translateX(-50%);
+  z-index: 5;
 }
 
-#feather {
-
-    position:absolute;
-
-    right:100px;
-
-    top:100px;
-
-    width:200px;
-
+.menu-panel,
+.viewer-panel {
+  position: absolute;
+  top: 140px;
+  width: 430px;
+  min-height: 620px;
+  z-index: 3;
 }
 
-h1 {
+.menu-panel {
+  left: 70px;
+}
 
-    position:absolute;
+.viewer-panel {
+  right: 70px;
+  width: 520px;
+}
 
-    top:20px;
+.panel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: -1;
+}
 
-    left:50%;
+.menu-content,
+.viewer-content {
+  padding: 70px 55px;
+  text-align: center;
+}
 
-    transform:translateX(-50%);
+h1, h2 {
+  margin-top: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-    color:#d8c29d;
+.subtitle {
+  font-style: italic;
+  margin-bottom: 25px;
+}
 
+button {
+  display: block;
+  width: 100%;
+  margin: 14px 0;
+  padding: 12px;
+  background: rgba(40, 20, 8, 0.85);
+  color: #e7d1a0;
+  border: 1px solid #8a5d28;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(75, 38, 14, 0.95);
+}
+
+.divider {
+  width: 180px;
+  margin: 15px auto;
+  display: block;
+}
+
+.candle {
+  position: absolute;
+  left: 35px;
+  bottom: 40px;
+  width: 160px;
+  z-index: 4;
+}
+
+.books {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  width: 220px;
+  z-index: 4;
+}
+
+.feather {
+  position: absolute;
+  left: 530px;
+  top: 610px;
+  width: 150px;
+  z-index: 5;
+}
+
+.ink {
+  position: absolute;
+  left: 455px;
+  top: 610px;
+  width: 90px;
+  z-index: 5;
+}
+
+.compass {
+  position: absolute;
+  right: 520px;
+  top: 600px;
+  width: 130px;
+  z-index: 5;
+}
+
+.cup {
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  width: 140px;
+  z-index: 4;
+}
+
+.leaves {
+  position: absolute;
+  left: 20px;
+  top: 130px;
+  width: 140px;
+  z-index: 4;
+}
+
+@media (max-width: 900px) {
+  .desk {
+    padding: 20px;
+  }
+
+  .logo,
+  .candle,
+  .books,
+  .feather,
+  .ink,
+  .compass,
+  .cup,
+  .leaves {
+    display: none;
+  }
+
+  .menu-panel,
+  .viewer-panel {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    margin: 25px auto;
+  }
 }
